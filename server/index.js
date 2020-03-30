@@ -75,7 +75,7 @@ app.get('/api/user/logout',auth, (req, res)=>{
 
     User.findOneAndUpdate({_id: req.user._id},{token: ''}, (err, user)=>{
         if(err) return res.json({
-            success:falase, err
+            success:false, err
         });
    res.cookie('X_auth','').json({success: true});
 })
