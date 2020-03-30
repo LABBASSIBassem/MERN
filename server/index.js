@@ -81,6 +81,10 @@ app.get('/api/user/logout',auth, (req, res)=>{
 })
 })
 
+app.get('/', (req,res)=>{
+    res.send("hello there")
+})
+
 
 
 
